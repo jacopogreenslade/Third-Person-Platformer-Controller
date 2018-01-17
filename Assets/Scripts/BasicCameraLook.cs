@@ -30,7 +30,7 @@ public class BasicCameraLook : MonoBehaviour {
 		// This function does the same
 		transform.LookAt(cameraCenter.position);
 		// Rotate with mouse
-		cameraCenter.localRotation = Quaternion.Euler(mouseY, mouseX, 0);
+		cameraCenter.localRotation = Quaternion.Euler(-mouseY, mouseX, 0);
 		// Match player position
 		cameraCenter.position = new Vector3(targetObj.position.x, targetObj.position.y + 1f, targetObj.position.z);
 	}
